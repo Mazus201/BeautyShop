@@ -43,13 +43,25 @@ namespace BeautyShop.PageFolder
             }
             if (GlobalVar.IsDeleted1 == true)
             {
-                SPService1.Children.Clear();
+                SPService1.Visibility = Visibility.Hidden;
                 SPService2.Margin = new Thickness(15, -110, 15, 5);
+            } 
+            else
+            {
+                SPService1.Visibility = Visibility.Visible;
+                SPService2.Margin = new Thickness(15, 0, 15, 0);
             }
+
             if (GlobalVar.IsDeleted2 == true)
             {
-                SPService2.Children.Clear();
+                SPService2.Visibility = Visibility.Hidden;
             }
+            else
+                SPService2.Visibility = Visibility.Visible;
+
+            TT2.Content = TBReview2.Text;
+            TT1.Content = TBReview1.Text;
+
         }
 
         private void BtnGetServ_Click(object sender, RoutedEventArgs e)
@@ -59,7 +71,7 @@ namespace BeautyShop.PageFolder
 
         private void BtnMoreInfo_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(TxtMoreInfo.Text); 
+            MessageBox.Show(TBReview1.Text); 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -70,7 +82,7 @@ namespace BeautyShop.PageFolder
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            ClsFrame.FrmBody.Navigate(new EditPage());
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
@@ -78,12 +90,13 @@ namespace BeautyShop.PageFolder
             if (CBToDelete.IsChecked == true)
             {
                 SPService1.Children.Clear();
-                GlobalVar.IsDeleted1 = true;
+                SPService1.Visibility = Visibility.Hidden;
                 SPService2.Margin = new Thickness(15, -110, 15, 5);
             }
+
             if (CBToDelete2.IsChecked == true)
             {
-                SPService2.Children.Clear();
+                SPService2.Visibility = Visibility.Hidden;
                 GlobalVar.IsDeleted2 = true;
             }
         }

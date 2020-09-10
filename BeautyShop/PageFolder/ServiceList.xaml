@@ -11,8 +11,10 @@
     <Grid>
 
         <StackPanel Height="405" VerticalAlignment="Top" 
-                    CanVerticallyScroll="True" >
-            <StackPanel Name="SPService1" Background="{StaticResource BrushElem}" Orientation="Horizontal" Margin="15, 5" Height="105">
+                    CanVerticallyScroll="True" Name="MainContainer">
+            <StackPanel Name="SPService1" Background="{StaticResource BrushElem}" 
+                        Orientation="Horizontal" Margin="15, 5" Height="105"
+                        Visibility="Visible">
                 <Image Source="/Resources/Photo/man.png" Width="100" Height="100"/>
                 <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
                     <StackPanel Width="400" HorizontalAlignment="Left">
@@ -24,7 +26,10 @@
                                 Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
                             <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
                                        Foreground="Gray" TextTrimming="WordEllipsis"
-                                       Name="TxtMoreInfo">
+                                       Name="TBReview1">
+                                <TextBlock.ToolTip>
+                                    <ToolTip Name="TT1"></ToolTip>
+                                </TextBlock.ToolTip>
                                        Модельная, стильная мужская стрижка с личным парикмахером
                             </TextBlock>
                         </Button>
@@ -43,17 +48,21 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
-                    <TextBlock VerticalAlignment="Center" Margin="-70, 0,0,0"
-                                   FontSize="22pt" Text="Стоимость: xxxхххх"
-                                   Width="200" Height="80" TextWrapping="Wrap" 
-                                   TextAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Center" Margin="-70, 0,0,0" 
+                                Width="200" Height="80">
+                        <TextBlock FontSize="22pt" Text="Стоимость:"
+                                   TextWrapping="Wrap" TextAlignment="Center"/>
+                        <TextBlock FontSize="22pt" Text="XXXXX" Name="TxtPrice1"
+                                   TextWrapping="Wrap" TextAlignment="Center"/>
+                    </StackPanel>
                     <CheckBox HorizontalAlignment="Center"
                                   VerticalAlignment="Center" Name="CBToDelete" 
                                   Visibility="Hidden" Margin="150, -50, 0, 0"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Background="{StaticResource BrushElem}" Orientation="Horizontal" 
-                        Margin="15, 5" Height="105" Name="SPService2">
+                        Margin="15, 5" Height="105" Name="SPService2" 
+                        Visibility="Visible">
                 <Image Source="/Resources/Photo/mask.png" Width="100" Height="100"/>
                 <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
                     <StackPanel Width="400" HorizontalAlignment="Left">
@@ -64,7 +73,11 @@
                                         HorizontalContentAlignment="Left" Margin="0"
                                         Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
                             <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
-                                               Foreground="Gray" TextTrimming="WordEllipsis">
+                                               Foreground="Gray" TextTrimming="WordEllipsis"
+                                       Name="TBReview2">
+                                <TextBlock.ToolTip>
+                                    <ToolTip Name="TT2"></ToolTip>
+                                </TextBlock.ToolTip>
                                             Маска с нано составом, избавляет от любого типа морщин.
                             </TextBlock>
                         </Button>
@@ -83,10 +96,13 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
-                    <TextBlock VerticalAlignment="Center" Margin="-70, 0,0,0"
-                                   FontSize="22pt" Text="Стоимость: xxxхххх"
-                                   Width="200" Height="80" TextWrapping="Wrap" 
-                                   TextAlignment="Center"/>
+                    <StackPanel VerticalAlignment="Center" Margin="-70, 0,0,0" 
+                                Width="200" Height="80">
+                        <TextBlock FontSize="22pt" Text="Стоимость:"
+                                   TextWrapping="Wrap" TextAlignment="Center"/>
+                        <TextBlock FontSize="22pt" Text="XXXXX"  Name="TxtPrice2"
+                                   TextWrapping="Wrap" TextAlignment="Center"/>
+                    </StackPanel>
                     <CheckBox HorizontalAlignment="Center" Name="CBToDelete2"
                                   VerticalAlignment="Center"
                                   Visibility="Hidden" Margin="150, -50, 0, 0"/>

@@ -27,3 +27,5 @@ C:\Users\Никита\source\repos\BeautyShop\BeautyShop\obj\Debug\PageFolder\Se
 C:\Users\Никита\source\repos\BeautyShop\BeautyShop\obj\Debug\BeautyShop_Content.g.cs
 C:\Users\Никита\source\repos\BeautyShop\BeautyShop\obj\Debug\PageFolder\ServiceList.baml
 C:\Users\Никита\source\repos\BeautyShop\BeautyShop\obj\Debug\BeautyShop.csproj.CopyComplete
+C:\Users\Никита\source\repos\BeautyShop\BeautyShop\obj\Debug\PageFolder\EditPage.g.cs
+C:\Users\Никита\source\repos\BeautyShop\BeautyShop\obj\Debug\PageFolder\EditPage.baml

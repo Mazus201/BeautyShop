@@ -66,6 +66,9 @@
     </ApplicationDefinition>
     <Compile Include="AppData\ClsEnt.cs" />
     <Compile Include="AppData\GlobalVar.cs" />
+    <Compile Include="PageFolder\EditPage.xaml.cs">
+      <DependentUpon>EditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageFolder\ServiceList.xaml.cs">
       <DependentUpon>ServiceList.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PageFolder\Autorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageFolder\EditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

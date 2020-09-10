@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BeautyShop.AppData;
+using BeautyShop.Resources;
 
 namespace BeautyShop.PageFolder
 {
@@ -23,6 +25,51 @@ namespace BeautyShop.PageFolder
         public EditPage()
         {
             InitializeComponent();
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            ClsFrame.FrmBody.Navigate(new ServiceList());
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnGetServ_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMoreInfo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnGiveBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (CBToDelete.IsChecked == true)
+            {
+                GlobalVar.IsDeleted1 = false;
+                MessageBox.Show("Успешно!");
+            }
+
+            if (CBToDelete2.IsChecked == true)
+            {
+                GlobalVar.IsDeleted2 = false;
+                MessageBox.Show("Успешно!");
+            }
+        }
+
+        private void BtnChange1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnChange2_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
