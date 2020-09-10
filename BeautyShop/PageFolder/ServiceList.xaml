@@ -31,11 +31,15 @@
                     </StackPanel>
                     <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
                         <Button Name="BtnGetServ" Content="Заказать"
-                                        Click="BtnGetServ_Click"/>
+                                        Click="BtnGetServ_Click">
+                            <Button.ToolTip>
+                                <ToolTip Name="TTPrice1">
+                                    Стоимость: XXXX
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
                         <Button Name="BtnMoreInfo" Content="Узнать подробнее"
                                         Click="BtnMoreInfo_Click"/>
-                        <Button Name="BtnEdit" Content="Изменить" 
-                                        Click="BtnEdit_Click" Visibility="Hidden"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
@@ -67,11 +71,15 @@
                     </StackPanel>
                     <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
                         <Button  Content="Заказать"
-                                        Click="BtnGetServ_Click"/>
+                                        Click="BtnGetServ_Click">
+                            <Button.ToolTip>
+                                <ToolTip Name="TTPrice2">
+                                    Стоимость: XXXX
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
                         <Button  Content="Узнать подробнее"
                                         Click="BtnMoreInfo_Click"/>
-                        <Button Content="Изменить" 
-                                        Click="BtnEdit_Click" Visibility="Hidden"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
@@ -79,7 +87,7 @@
                                    FontSize="22pt" Text="Стоимость: xxxхххх"
                                    Width="200" Height="80" TextWrapping="Wrap" 
                                    TextAlignment="Center"/>
-                    <CheckBox HorizontalAlignment="Center"
+                    <CheckBox HorizontalAlignment="Center" Name="CBToDelete2"
                                   VerticalAlignment="Center"
                                   Visibility="Hidden" Margin="150, -50, 0, 0"/>
                 </StackPanel>
@@ -91,13 +99,15 @@
             <Button Content="Удалить выбранное" Name="BtnDelete" Margin="0, 5, 0, 5"
                     Click="BtnDelete_Click" Visibility="Hidden"/>
             <Button  Content="Корзина" Visibility="Hidden" Name="BtnBacket" Click="BtnBacket_Click"/>
-            <Button/>
-            <Button Width="30">
-                <Image Height="20" Source="/Resources/Photo/Left.png"/>
-            </Button>
-            <Button Width="30">
-                <Image Height="20" Source="/Resources/Photo/Right.png" />
-            </Button>
+            <Button Name="BtnEdit" Click="BtnEdit_Click" Content="Изменить" Visibility="Hidden"/>
+            <StackPanel Orientation="Horizontal" Name="SPNavigation">
+                <Button Width="30">
+                    <Image Height="20" Source="/Resources/Photo/Left.png"/>
+                </Button>
+                <Button Width="30">
+                    <Image Height="20" Source="/Resources/Photo/Right.png" />
+                </Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

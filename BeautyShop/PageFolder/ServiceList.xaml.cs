@@ -31,17 +31,24 @@ namespace BeautyShop.PageFolder
                 BtnEdit.Visibility = Visibility.Visible;
                 BtnDelete.Visibility = Visibility.Visible;
                 CBToDelete.Visibility = Visibility.Visible;
+                CBToDelete2.Visibility = Visibility.Visible;
+
             }
             else
             {
                 BtnEdit.Visibility = Visibility.Hidden;
                 BtnDelete.Visibility = Visibility.Hidden;
                 CBToDelete.Visibility = Visibility.Hidden;
+                CBToDelete2.Visibility = Visibility.Hidden;
             }
-            if (GlobalVar.IsDeleted == true)
+            if (GlobalVar.IsDeleted1 == true)
             {
                 SPService1.Children.Clear();
                 SPService2.Margin = new Thickness(15, -110, 15, 5);
+            }
+            if (GlobalVar.IsDeleted2 == true)
+            {
+                SPService2.Children.Clear();
             }
         }
 
@@ -71,7 +78,13 @@ namespace BeautyShop.PageFolder
             if (CBToDelete.IsChecked == true)
             {
                 SPService1.Children.Clear();
-                GlobalVar.IsDeleted = true;
+                GlobalVar.IsDeleted1 = true;
+                SPService2.Margin = new Thickness(15, -110, 15, 5);
+            }
+            if (CBToDelete2.IsChecked == true)
+            {
+                SPService2.Children.Clear();
+                GlobalVar.IsDeleted2 = true;
             }
         }
 
