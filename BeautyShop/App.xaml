@@ -14,5 +14,20 @@
         <Style TargetType="Border">
             <Setter Property="CornerRadius" Value="3"/>
         </Style>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="Brush">
+            <GradientStop Offset="0" Color="White"/>
+            <GradientStop Offset="0.5" Color="#e9cec3"/>
+            <GradientStop Offset="1" Color="#e9c3cb"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="BrushElem">
+            <GradientStop Offset="0" Color="#fefdfc"/>
+            <GradientStop Offset="0.5" Color="#e9cec3"/>
+            <GradientStop Offset="1" Color="#e9c7c8"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="BrushButton">
+            <GradientStop Offset="0" Color="#f8eeec"/>
+            <GradientStop Offset="0.5" Color="#e9cec3"/>
+            <GradientStop Offset="1" Color="#ebccc8"/>
+        </LinearGradientBrush>
     </Application.Resources>
 </Application>

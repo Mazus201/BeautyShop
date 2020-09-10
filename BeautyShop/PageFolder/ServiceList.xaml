@@ -10,57 +10,86 @@
 
     <Grid>
 
-        <StackPanel Name="SPService" Height="405" VerticalAlignment="Top" 
-                    CanVerticallyScroll="True">
-            <Border Height="130" Width="794" Background="Black" 
-                    HorizontalAlignment="Center">
-                <Border Height="128" Width="792" Background="White"
-                        HorizontalAlignment="Center">
-                    <StackPanel Orientation="Horizontal" Margin="15" Height="105">
-                        <Image Source="/Resources/Photo/man.png" Width="100" Height="100"/>
-                        <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
-                            <StackPanel Width="400" HorizontalAlignment="Left">
-                                <TextBlock FontSize="21pt">
+        <StackPanel Height="405" VerticalAlignment="Top" 
+                    CanVerticallyScroll="True" >
+            <StackPanel Name="SPService1" Background="{StaticResource BrushElem}" Orientation="Horizontal" Margin="15, 5" Height="105">
+                <Image Source="/Resources/Photo/man.png" Width="100" Height="100"/>
+                <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
+                    <StackPanel Width="400" HorizontalAlignment="Left">
+                        <TextBlock FontSize="21pt">
                                     Мужская стрижка
-                                </TextBlock>
-                                <Button Background="White" Width="410" HorizontalAlignment="Left"
+                        </TextBlock>
+                        <Button Background="{StaticResource BrushButton}" Width="410" HorizontalAlignment="Left"
                                         HorizontalContentAlignment="Left" Margin="0"
-                                        SnapsToDevicePixels="true" 
-                                        Click="BtnMoreInfo_Click" BorderBrush="White">
-                                    <TextBlock FontSize="16pt" Foreground="Gray" TextTrimming="WordEllipsis">
-                                        Модельная, стильная мужская стрижка с ичным парикмахером
-                                    </TextBlock>
-                                </Button>
-                            </StackPanel>
-                            <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
-                                <Button Name="BtnGetServ" Content="Заказать"
+                                        Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
+                            <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
+                                               Foreground="Gray" TextTrimming="WordEllipsis">
+                                            Модельная, стильная мужская стрижка с ичным парикмахером
+                            </TextBlock>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
+                        <Button Name="BtnGetServ" Content="Заказать"
                                         Click="BtnGetServ_Click"/>
-                                <Button Name="BtnMoreInfo" Content="Узнать подробнее"
+                        <Button Name="BtnMoreInfo" Content="Узнать подробнее"
                                         Click="BtnMoreInfo_Click"/>
-                                <Button Name="BtnEdit" Content="Изменить" 
+                        <Button Name="BtnEdit" Content="Изменить" 
                                         Click="BtnEdit_Click" Visibility="Hidden"/>
-                            </StackPanel>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock VerticalAlignment="Center" Margin="-70, 0,0,0"
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock VerticalAlignment="Center" Margin="-70, 0,0,0"
                                    FontSize="22pt" Text="Стоимость: xxxхххх"
                                    Width="200" Height="80" TextWrapping="Wrap" 
                                    TextAlignment="Center"/>
-                            <CheckBox HorizontalAlignment="Center"
+                    <CheckBox HorizontalAlignment="Center"
                                   VerticalAlignment="Center" Name="CBToDelete" 
                                   Visibility="Hidden" Margin="150, -50, 0, 0"/>
-                        </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Background="{StaticResource BrushElem}" Orientation="Horizontal" Margin="15, 5" Height="105">
+                <Image Source="/Resources/Photo/man.png" Width="100" Height="100"/>
+                <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
+                    <StackPanel Width="400" HorizontalAlignment="Left">
+                        <TextBlock FontSize="21pt">
+                                    Мужская стрижка
+                        </TextBlock>
+                        <Button Background="{StaticResource BrushButton}" Width="410" HorizontalAlignment="Left"
+                                        HorizontalContentAlignment="Left" Margin="0"
+                                        Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
+                            <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
+                                               Foreground="Gray" TextTrimming="WordEllipsis">
+                                            Модельная, стильная мужская стрижка с ичным парикмахером
+                            </TextBlock>
+                        </Button>
                     </StackPanel>
-                </Border>
-            </Border>
+                    <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
+                        <Button  Content="Заказать"
+                                        Click="BtnGetServ_Click"/>
+                        <Button  Content="Узнать подробнее"
+                                        Click="BtnMoreInfo_Click"/>
+                        <Button Content="Изменить" 
+                                        Click="BtnEdit_Click" Visibility="Hidden"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock VerticalAlignment="Center" Margin="-70, 0,0,0"
+                                   FontSize="22pt" Text="Стоимость: xxxхххх"
+                                   Width="200" Height="80" TextWrapping="Wrap" 
+                                   TextAlignment="Center"/>
+                    <CheckBox HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Visibility="Hidden" Margin="150, -50, 0, 0"/>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom"
                     Orientation="Horizontal">
             <Button Content="Назад" Click="Button_Click" IsCancel="True"/>
-            <Button Content="Удалить выбранное" Name="BtnDelete" 
+            <Button Content="Удалить выбранное" Name="BtnDelete" Margin="0, 5, 0, 5"
                     Click="BtnDelete_Click" Visibility="Hidden"/>
         </StackPanel>
-        <Button VerticalAlignment="Bottom" Content="Карзина" Visibility="Hidden" Name="BtnBacket"
+        <Button VerticalAlignment="Bottom" Content="Корзина" Visibility="Hidden" Name="BtnBacket"
                 Click="BtnBacket_Click"/>
     </Grid>
 </Page>

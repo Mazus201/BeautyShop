@@ -38,6 +38,8 @@ namespace BeautyShop.PageFolder
                 BtnDelete.Visibility = Visibility.Hidden;
                 CBToDelete.Visibility = Visibility.Hidden;
             }
+            if (GlobalVar.IsDeleted == true)
+                SPService1.Children.Clear();
         }
 
         private void BtnGetServ_Click(object sender, RoutedEventArgs e)
@@ -52,7 +54,7 @@ namespace BeautyShop.PageFolder
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ClsFrame.FrmBody.GoBack();
+            ClsFrame.FrmBody.Navigate(new MainMenu());
             GlobalVar.IsAdmin = false;
         }
 
@@ -63,7 +65,11 @@ namespace BeautyShop.PageFolder
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            if (CBToDelete.IsChecked == true)
+            {
+                SPService1.Children.Clear();
+                GlobalVar.IsDeleted = true;
+            }
         }
 
         private void BtnBacket_Click(object sender, RoutedEventArgs e)

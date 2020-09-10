@@ -204,6 +204,7 @@
       <DependentUpon>BeautyDB.edmx</DependentUpon>
       <LastGenOutput>BeautyDB.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Photo\beauty_logo.ico" />
     <SplashScreen Include="Resources\Photo\2222.png" />
     <Resource Include="Resources\Photo\man.png" />
   </ItemGroup>

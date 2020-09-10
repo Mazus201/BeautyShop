@@ -9,5 +9,6 @@ namespace BeautyShop.AppData
     class GlobalVar
     {
        public static bool IsAdmin = false;
+       public static bool IsDeleted = false;
     }
 }
