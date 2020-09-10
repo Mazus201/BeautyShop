@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e6fa420c54b4fa189d79e1bc6f54b0f" Name="Diagram1">
+        <EntityTypeShape EntityType="BeautyDBModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.ClientService" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.DocumentByService" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.Gender" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.Manufacturer" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.Service" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.ServicePhoto" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautyDBModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <AssociationConnector Association="BeautyDBModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.FK_ClientService_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.AttachedProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="BeautyDBModel.TagOfClient" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BeautyDBModel.AdminService" Width="1.5" PointX="3" PointY="22.25" />
+        <EntityTypeShape EntityType="BeautyDBModel.UserType" Width="1.5" PointX="5.25" PointY="13.125" />
+        <AssociationConnector Association="BeautyDBModel.FK_UserType_AdminService" />
+        <AssociationConnector Association="BeautyDBModel.FK_UserType_ClientService1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
