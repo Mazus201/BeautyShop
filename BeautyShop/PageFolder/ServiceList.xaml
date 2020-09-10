@@ -17,14 +17,15 @@
                 <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
                     <StackPanel Width="400" HorizontalAlignment="Left">
                         <TextBlock FontSize="21pt">
-                                    Мужская стрижка
+                            Мужская стрижка
                         </TextBlock>
                         <Button Background="{StaticResource BrushButton}" Width="410" HorizontalAlignment="Left"
-                                        HorizontalContentAlignment="Left" Margin="0"
-                                        Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
+                                HorizontalContentAlignment="Left" Margin="0"
+                                Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
                             <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
-                                               Foreground="Gray" TextTrimming="WordEllipsis">
-                                            Модельная, стильная мужская стрижка с ичным парикмахером
+                                       Foreground="Gray" TextTrimming="WordEllipsis"
+                                       Name="TxtMoreInfo">
+                                       Модельная, стильная мужская стрижка с личным парикмахером
                             </TextBlock>
                         </Button>
                     </StackPanel>
@@ -47,19 +48,20 @@
                                   Visibility="Hidden" Margin="150, -50, 0, 0"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Background="{StaticResource BrushElem}" Orientation="Horizontal" Margin="15, 5" Height="105">
-                <Image Source="/Resources/Photo/man.png" Width="100" Height="100"/>
+            <StackPanel Background="{StaticResource BrushElem}" Orientation="Horizontal" 
+                        Margin="15, 5" Height="105" Name="SPService2">
+                <Image Source="/Resources/Photo/mask.png" Width="100" Height="100"/>
                 <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
                     <StackPanel Width="400" HorizontalAlignment="Left">
                         <TextBlock FontSize="21pt">
-                                    Мужская стрижка
+                                    Женская маска
                         </TextBlock>
                         <Button Background="{StaticResource BrushButton}" Width="410" HorizontalAlignment="Left"
                                         HorizontalContentAlignment="Left" Margin="0"
                                         Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
                             <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
                                                Foreground="Gray" TextTrimming="WordEllipsis">
-                                            Модельная, стильная мужская стрижка с ичным парикмахером
+                                            Маска с нано составом, избавляет от любого типа морщин.
                             </TextBlock>
                         </Button>
                     </StackPanel>
@@ -88,8 +90,14 @@
             <Button Content="Назад" Click="Button_Click" IsCancel="True"/>
             <Button Content="Удалить выбранное" Name="BtnDelete" Margin="0, 5, 0, 5"
                     Click="BtnDelete_Click" Visibility="Hidden"/>
+            <Button  Content="Корзина" Visibility="Hidden" Name="BtnBacket" Click="BtnBacket_Click"/>
+            <Button/>
+            <Button Width="30">
+                <Image Height="20" Source="/Resources/Photo/Left.png"/>
+            </Button>
+            <Button Width="30">
+                <Image Height="20" Source="/Resources/Photo/Right.png" />
+            </Button>
         </StackPanel>
-        <Button VerticalAlignment="Bottom" Content="Корзина" Visibility="Hidden" Name="BtnBacket"
-                Click="BtnBacket_Click"/>
     </Grid>
 </Page>

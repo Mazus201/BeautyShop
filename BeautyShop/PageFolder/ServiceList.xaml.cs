@@ -39,7 +39,10 @@ namespace BeautyShop.PageFolder
                 CBToDelete.Visibility = Visibility.Hidden;
             }
             if (GlobalVar.IsDeleted == true)
+            {
                 SPService1.Children.Clear();
+                SPService2.Margin = new Thickness(15, -110, 15, 5);
+            }
         }
 
         private void BtnGetServ_Click(object sender, RoutedEventArgs e)
@@ -49,7 +52,7 @@ namespace BeautyShop.PageFolder
 
         private void BtnMoreInfo_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show(TxtMoreInfo.Text); 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
