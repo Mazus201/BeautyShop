@@ -29,5 +29,18 @@
             <GradientStop Offset="0.5" Color="#e9cec3"/>
             <GradientStop Offset="1" Color="#ebccc8"/>
         </LinearGradientBrush>
+        <Style TargetType="Button" x:Key="BtnElipse">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="Red"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

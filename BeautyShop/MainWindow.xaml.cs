@@ -32,5 +32,15 @@ namespace BeautyShop
             ClsFrame.FrmBody = FrmCenter;
             FrmCenter.Navigate(new MainMenu());
         }
+
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void BtnCLose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

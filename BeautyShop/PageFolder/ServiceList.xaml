@@ -21,18 +21,15 @@
                         <TextBlock FontSize="21pt">
                             Мужская стрижка
                         </TextBlock>
-                        <Button Background="{StaticResource BrushButton}" Width="410" HorizontalAlignment="Left"
-                                HorizontalContentAlignment="Left" Margin="0"
-                                Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
-                            <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
+
+                        <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
                                        Foreground="Gray" TextTrimming="WordEllipsis"
                                        Name="TBReview1">
-                                <TextBlock.ToolTip>
-                                    <ToolTip Name="TT1"></ToolTip>
-                                </TextBlock.ToolTip>
+                            <TextBlock.ToolTip>
+                                <ToolTip Name="TT1"></ToolTip>
+                            </TextBlock.ToolTip>
                                        Модельная, стильная мужская стрижка с личным парикмахером
-                            </TextBlock>
-                        </Button>
+                        </TextBlock>
                     </StackPanel>
                     <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
                         <Button Name="BtnGetServ" Content="Заказать"
@@ -69,18 +66,14 @@
                         <TextBlock FontSize="21pt">
                                     Женская маска
                         </TextBlock>
-                        <Button Background="{StaticResource BrushButton}" Width="410" HorizontalAlignment="Left"
-                                        HorizontalContentAlignment="Left" Margin="0"
-                                        Click="BtnMoreInfo_Click" BorderBrush="{StaticResource BrushButton}">
-                            <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
+                        <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
                                                Foreground="Gray" TextTrimming="WordEllipsis"
                                        Name="TBReview2">
-                                <TextBlock.ToolTip>
-                                    <ToolTip Name="TT2"></ToolTip>
-                                </TextBlock.ToolTip>
+                            <TextBlock.ToolTip>
+                                <ToolTip Name="TT2"></ToolTip>
+                            </TextBlock.ToolTip>
                                             Маска с нано составом, избавляет от любого типа морщин.
-                            </TextBlock>
-                        </Button>
+                        </TextBlock>
                     </StackPanel>
                     <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
                         <Button  Content="Заказать"
