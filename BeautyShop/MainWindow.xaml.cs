@@ -35,12 +35,19 @@ namespace BeautyShop
 
         private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            try
+            {
+                this.DragMove();
+            }
+            catch
+            {
+
+            }
         }
 
         private void BtnCLose_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+                this.Close();
         }
 
         private void BtnMiniature_Click(object sender, RoutedEventArgs e)

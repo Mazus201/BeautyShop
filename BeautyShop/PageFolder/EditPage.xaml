@@ -30,7 +30,7 @@
                     </StackPanel>
                     <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
                         <Button Name="BtnSave1" Content="Сохранить"
-                                        Click="BtnSave_Click">
+                                        Click="BtnChange1_Click">
                             <Button.ToolTip>
                                 <ToolTip Name="TTPrice1">
                                     Стоимость: XXXX
@@ -45,7 +45,7 @@
                                 Width="200" Height="80">
                         <TextBlock FontSize="22pt" Text="Стоимость:"
                                    TextWrapping="Wrap" TextAlignment="Center"/>
-                        <TextBlock FontSize="22pt" Text="XXXXX"  Name="TxtPrice1"
+                        <TextBox FontSize="22pt" Text="XXXXX"  Name="TxtPrice1"
                                    TextWrapping="Wrap" TextAlignment="Center"/>
                     </StackPanel>
                     <CheckBox HorizontalAlignment="Center"
@@ -72,7 +72,7 @@
                     </StackPanel>
                     <StackPanel Margin="-5, 0, 0, 0" Orientation="Horizontal" Width="470" Height="40">
                         <Button  Content="Сохранить"
-                                        Click="BtnSave_Click">
+                                        Click="BtnChange2_Click">
                             <Button.ToolTip>
                                 <ToolTip Name="TTPrice2">
                                     Стоимость: XXXX
@@ -87,7 +87,7 @@
                                 Width="200" Height="80">
                         <TextBlock FontSize="22pt" Text="Стоимость:"
                                    TextWrapping="Wrap" TextAlignment="Center"/>
-                        <TextBlock FontSize="22pt" Text="XXXXX" Name="TxtPrice2"
+                        <TextBox FontSize="22pt" Text="XXXXX" Name="TxtPrice2"
                                    TextWrapping="Wrap" TextAlignment="Center"/>
                     </StackPanel>
                     <CheckBox HorizontalAlignment="Center" Name="CBToDelete2"

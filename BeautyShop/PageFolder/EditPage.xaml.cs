@@ -59,25 +59,47 @@ namespace BeautyShop.PageFolder
         {
             if (CBToDelete.IsChecked == true)
             {
-                GlobalVar.IsDeleted1 = false;
-                MessageBox.Show("Успешно!", "Успех!");
+                if (GlobalVar.IsDeleted1 == true)
+                {
+                    GlobalVar.IsDeleted1 = false;
+                    MessageBox.Show("Успешно!", "Успех!");
+                }
             }
 
             if (CBToDelete2.IsChecked == true)
             {
-                GlobalVar.IsDeleted2 = false;
-                MessageBox.Show("Успешно!", "Успех!");
+                if (GlobalVar.IsDeleted2 == true)
+                {
+                    GlobalVar.IsDeleted2 = false;
+                    MessageBox.Show("Успешно!", "Успех!");
+                }
             }
         }
 
         private void BtnChange1_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                float NewPrice1 = Convert.ToInt32(TxtPrice1.Text);
+                GlobalVar.Price1 = NewPrice1;
+            }
+            catch
+            {
+                MessageBox.Show("Вы ввели недопустимое значение, нужно вводить цифры!", "Ошибка");
+            }
         }
 
         private void BtnChange2_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                float NewPrice2 = Convert.ToInt32(TxtPrice2.Text);
+                GlobalVar.Price2 = NewPrice2;
+            }
+            catch
+            {
+                MessageBox.Show("Вы ввели недопустимое значение, нужно вводить цифры!", "Ошибка");
+            }
         }
     }
 }

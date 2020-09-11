@@ -59,6 +59,11 @@ namespace BeautyShop.PageFolder
             else
                 SPService2.Visibility = Visibility.Visible;
 
+            string NewPrice1 = Convert.ToString(GlobalVar.Price1);
+            TxtPrice1.Text = NewPrice1;
+            string NewPrice2 = Convert.ToString(GlobalVar.Price2);
+            TxtPrice2.Text = NewPrice2;
+
             TT2.Content = TBReview2.Text;
             TT1.Content = TBReview1.Text;
 

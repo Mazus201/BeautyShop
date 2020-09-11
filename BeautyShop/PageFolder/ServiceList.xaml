@@ -92,10 +92,10 @@
                 <StackPanel>
                     <StackPanel VerticalAlignment="Center" Margin="-70, 0,0,0" 
                                 Width="200" Height="80">
-                        <TextBlock FontSize="22pt" Text="Стоимость:"
-                                   TextWrapping="Wrap" TextAlignment="Center"/>
-                        <TextBlock FontSize="22pt" Text="XXXXX"  Name="TxtPrice2"
-                                   TextWrapping="Wrap" TextAlignment="Center"/>
+                        <TextBlock FontSize="22pt" Text="XXXXX" Name="TxtPrice2"
+                               TextWrapping="Wrap" TextAlignment="Center"
+                               VerticalAlignment="Center" Margin="0, 30,0,0" 
+                               Width="200" Height="80"/>
                     </StackPanel>
                     <CheckBox HorizontalAlignment="Center" Name="CBToDelete2"
                                   VerticalAlignment="Center"
