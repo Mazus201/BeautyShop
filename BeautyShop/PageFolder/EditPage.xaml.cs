@@ -60,13 +60,13 @@ namespace BeautyShop.PageFolder
             if (CBToDelete.IsChecked == true)
             {
                 GlobalVar.IsDeleted1 = false;
-                MessageBox.Show("Успешно!");
+                MessageBox.Show("Успешно!", "Успех!");
             }
 
             if (CBToDelete2.IsChecked == true)
             {
                 GlobalVar.IsDeleted2 = false;
-                MessageBox.Show("Успешно!");
+                MessageBox.Show("Успешно!", "Успех!");
             }
         }
 

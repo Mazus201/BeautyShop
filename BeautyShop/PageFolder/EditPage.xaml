@@ -11,17 +11,17 @@
     <Grid>
         <StackPanel Height="405" VerticalAlignment="Top" 
                     CanVerticallyScroll="True" Name="MainContainer">
-            <StackPanel Name="SPService1" Background="{StaticResource BrushElem}" Orientation="Horizontal" Margin="15, 5" Height="105">
+            <StackPanel Name="SPService1" Background="Transparent" Orientation="Horizontal" Margin="15, 5" Height="105">
                 <Image Source="/Resources/Photo/man.png" Width="100" Height="100"/>
                 <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
                     <StackPanel Width="400" HorizontalAlignment="Left">
                         <TextBlock FontSize="21pt">
                             Мужская стрижка
                         </TextBlock>
-                        <Button Background="{StaticResource BrushButton}" Width="410" HorizontalAlignment="Left"
+                        <Button Background="Transparent" Width="410" HorizontalAlignment="Left"
                                 HorizontalContentAlignment="Left" Margin="0" Name="BtnChange1"
-                                Click="BtnChange1_Click" BorderBrush="{StaticResource BrushButton}">
-                            <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
+                                Click="BtnChange1_Click" BorderBrush="Transparent">
+                            <TextBlock Background="Transparent" FontSize="16pt"
                                        Foreground="Gray" TextTrimming="WordEllipsis"
                                        Name="TxtMoreInfo">
                                        Модельная, стильная мужская стрижка с личным парикмахером
@@ -53,7 +53,7 @@
                                   Visibility="Visible" Margin="150, -50, 0, 0"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Background="{StaticResource BrushElem}" Orientation="Horizontal" 
+            <StackPanel Background="Transparent" Orientation="Horizontal" 
                         Margin="15, 5" Height="105" Name="SPService2">
                 <Image Source="/Resources/Photo/mask.png" Width="100" Height="100"/>
                 <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
@@ -61,10 +61,10 @@
                         <TextBlock FontSize="21pt">
                                     Женская маска
                         </TextBlock>
-                        <Button Background="{StaticResource BrushButton}" Width="410" HorizontalAlignment="Left"
+                        <Button Background="Transparent" Width="410" HorizontalAlignment="Left"
                                         HorizontalContentAlignment="Left" Margin="0" Name="BtnChange2"
-                                        Click="BtnChange2_Click" BorderBrush="{StaticResource BrushButton}">
-                            <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
+                                        Click="BtnChange2_Click" BorderBrush="Transparent">
+                            <TextBlock Background="Transparent" FontSize="16pt"
                                                Foreground="Gray" TextTrimming="WordEllipsis">
                                             Маска с нано составом, избавляет от любого типа морщин.
                             </TextBlock>

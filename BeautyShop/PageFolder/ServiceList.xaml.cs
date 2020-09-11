@@ -31,7 +31,7 @@ namespace BeautyShop.PageFolder
                 BtnEdit.Visibility = Visibility.Visible;
                 BtnDelete.Visibility = Visibility.Visible;
                 CBToDelete.Visibility = Visibility.Visible;
-                //CBToDelete2.Visibility = Visibility.Visible;
+                CBToDelete2.Visibility = Visibility.Visible;
 
             }
             else //скрытие скрытых элементов, если ты клиент
@@ -39,28 +39,28 @@ namespace BeautyShop.PageFolder
                 BtnEdit.Visibility = Visibility.Hidden;
                 BtnDelete.Visibility = Visibility.Hidden;
                 CBToDelete.Visibility = Visibility.Hidden;
-                //CBToDelete2.Visibility = Visibility.Hidden;
+                CBToDelete2.Visibility = Visibility.Hidden;
             }
             if (GlobalVar.IsDeleted1 == true) //переменная, говорящая об удалении услуги
             {
                 SPService1.Visibility = Visibility.Hidden;
-                //SPService2.Margin = new Thickness(15, -110, 15, 5);
+                SPService2.Margin = new Thickness(15, -110, 15, 5);
             } 
             else
             {
                 SPService1.Visibility = Visibility.Visible; //восстановление услуги
-                //SPService2.Margin = new Thickness(15, 0, 15, 0);
+                SPService2.Margin = new Thickness(15, 0, 15, 0);
             }
 
-            //if (GlobalVar.IsDeleted2 == true)
-            //{
-            //    SPService2.Visibility = Visibility.Hidden;
-            //}
-            //else
-            //    SPService2.Visibility = Visibility.Visible;
+            if (GlobalVar.IsDeleted2 == true)
+            {
+                SPService2.Visibility = Visibility.Hidden;
+            }
+            else
+                SPService2.Visibility = Visibility.Visible;
 
-            //TT2.Content = TBReview2.Text;
-            //TT1.Content = TBReview1.Text;
+            TT2.Content = TBReview2.Text;
+            TT1.Content = TBReview1.Text;
 
         }
         /// <summary>
@@ -105,21 +105,26 @@ namespace BeautyShop.PageFolder
         {
             if (CBToDelete.IsChecked == true)
             {
-                SPService1.Children.Clear();
                 SPService1.Visibility = Visibility.Hidden;
-                //SPService2.Margin = new Thickness(15, -110, 15, 5);
+                SPService2.Margin = new Thickness(15, -110, 15, 5);
+                GlobalVar.IsDeleted1 = true;
             }
 
-            //if (CBToDelete2.IsChecked == true)
-            //{
-            //    SPService2.Visibility = Visibility.Hidden;
-            //    GlobalVar.IsDeleted2 = true;
-            //}
+            if (CBToDelete2.IsChecked == true)
+            {
+                SPService2.Visibility = Visibility.Hidden;
+                GlobalVar.IsDeleted2 = true;
+            }
         }
 
         private void BtnBacket_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void BtnMoreInfo2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(TBReview2.Text);
         }
     }
 }

@@ -15,8 +15,8 @@
         </Grid.RowDefinitions>
 
         <ListBox VerticalAlignment="Top" Grid.Row="0" Grid.RowSpan="1"
-                 Name="MainContainer" Background="Transparent">
-            <StackPanel Name="SPService1" Background="{StaticResource BrushElem}" 
+                 x:Name="LBMainContainer" Background="Transparent" BorderBrush="#00000000">
+            <StackPanel Name="SPService1" Background="Transparent" 
                         Orientation="Horizontal" Margin="15, 5" Height="105"
                         Visibility="Visible">
                 <Image Name="ImgService" Source="/Resources/Photo/man.png" Width="100" Height="100"/>
@@ -26,7 +26,7 @@
                             Мужская стрижка
                         </TextBlock>
 
-                        <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
+                        <TextBlock Background="Transparent" FontSize="16pt"
                                        Foreground="Gray" TextTrimming="WordEllipsis"
                                        Name="TBReview1">
                             <TextBlock.ToolTip>
@@ -55,10 +55,10 @@
                                Width="200" Height="80"/>
                         <CheckBox HorizontalAlignment="Center"
                                   VerticalAlignment="Center" Name="CBToDelete" 
-                                  Visibility="Hidden" Margin="150, -50, 0, 0"/>
+                                  Visibility="Visible" Margin="150, -115, 0, 0"/>
                 </StackPanel>
             </StackPanel>
-            <!--<StackPanel Background="{StaticResource BrushElem}" Orientation="Horizontal" 
+            <StackPanel Background="Transparent" Orientation="Horizontal" 
                         Margin="15, 5" Height="105" Name="SPService2" 
                         Visibility="Visible">
                 <Image Source="/Resources/Photo/mask.png" Width="100" Height="100"/>
@@ -67,7 +67,7 @@
                         <TextBlock FontSize="21pt">
                                     Женская маска
                         </TextBlock>
-                        <TextBlock Background="{StaticResource BrushButton}" FontSize="16pt"
+                        <TextBlock Background="Transparent" FontSize="16pt"
                                                Foreground="Gray" TextTrimming="WordEllipsis"
                                        Name="TBReview2">
                             <TextBlock.ToolTip>
@@ -85,8 +85,8 @@
                                 </ToolTip>
                             </Button.ToolTip>
                         </Button>
-                        <Button  Content="Узнать подробнее"
-                                        Click="BtnMoreInfo_Click"/>
+                        <Button  Content="Узнать подробнее" Name="BtnMoreInfo2"
+                                        Click="BtnMoreInfo2_Click"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
@@ -101,7 +101,7 @@
                                   VerticalAlignment="Center"
                                   Visibility="Hidden" Margin="150, -50, 0, 0"/>
                 </StackPanel>
-            </StackPanel>-->
+            </StackPanel>
         </ListBox>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Grid.RowSpan="1"
                     Orientation="Horizontal" Margin="0,0,0,-0.4">
