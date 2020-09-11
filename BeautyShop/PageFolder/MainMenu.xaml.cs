@@ -25,11 +25,21 @@ namespace BeautyShop.PageFolder
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// переход на авторизацию администратора
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAdm_Click(object sender, RoutedEventArgs e)
         {
             ClsFrame.FrmBody.Navigate(new Autorization());
         }
 
+        /// <summary>
+        /// возвращение назад
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnClient_Click(object sender, RoutedEventArgs e)
         {
             ClsFrame.FrmBody.Navigate(new ServiceList());

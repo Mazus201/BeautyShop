@@ -26,7 +26,11 @@ namespace BeautyShop.PageFolder
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// кнопка возврата
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             ClsFrame.FrmBody.Navigate(new ServiceList());
@@ -46,7 +50,11 @@ namespace BeautyShop.PageFolder
         {
 
         }
-
+        /// <summary>
+        /// Восстановление панели по чекбоксу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnGiveBack_Click(object sender, RoutedEventArgs e)
         {
             if (CBToDelete.IsChecked == true)

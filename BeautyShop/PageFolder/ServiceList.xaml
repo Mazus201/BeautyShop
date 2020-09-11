@@ -9,16 +9,20 @@
       Title="ServiceList">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="410*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
 
-        <StackPanel Height="405" VerticalAlignment="Top" 
-                    CanVerticallyScroll="True" Name="MainContainer">
+        <ListBox VerticalAlignment="Top" Grid.Row="0" Grid.RowSpan="1"
+                 Name="MainContainer" Background="Transparent">
             <StackPanel Name="SPService1" Background="{StaticResource BrushElem}" 
                         Orientation="Horizontal" Margin="15, 5" Height="105"
                         Visibility="Visible">
-                <Image Source="/Resources/Photo/man.png" Width="100" Height="100"/>
+                <Image Name="ImgService" Source="/Resources/Photo/man.png" Width="100" Height="100"/>
                 <StackPanel Width="450" HorizontalAlignment="Left" Margin="10, 0">
                     <StackPanel Width="400" HorizontalAlignment="Left">
-                        <TextBlock FontSize="21pt">
+                        <TextBlock Name="TxtNameService" FontSize="21pt">
                             Мужская стрижка
                         </TextBlock>
 
@@ -45,19 +49,16 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
-                    <StackPanel VerticalAlignment="Center" Margin="-70, 0,0,0" 
-                                Width="200" Height="80">
-                        <TextBlock FontSize="22pt" Text="Стоимость:"
-                                   TextWrapping="Wrap" TextAlignment="Center"/>
-                        <TextBlock FontSize="22pt" Text="XXXXX" Name="TxtPrice1"
-                                   TextWrapping="Wrap" TextAlignment="Center"/>
-                    </StackPanel>
-                    <CheckBox HorizontalAlignment="Center"
+                    <TextBlock FontSize="22pt" Text="XXXXX" Name="TxtPrice1"
+                               TextWrapping="Wrap" TextAlignment="Center"
+                               VerticalAlignment="Center" Margin="-70, 30,0,0" 
+                               Width="200" Height="80"/>
+                        <CheckBox HorizontalAlignment="Center"
                                   VerticalAlignment="Center" Name="CBToDelete" 
                                   Visibility="Hidden" Margin="150, -50, 0, 0"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Background="{StaticResource BrushElem}" Orientation="Horizontal" 
+            <!--<StackPanel Background="{StaticResource BrushElem}" Orientation="Horizontal" 
                         Margin="15, 5" Height="105" Name="SPService2" 
                         Visibility="Visible">
                 <Image Source="/Resources/Photo/mask.png" Width="100" Height="100"/>
@@ -100,10 +101,10 @@
                                   VerticalAlignment="Center"
                                   Visibility="Hidden" Margin="150, -50, 0, 0"/>
                 </StackPanel>
-            </StackPanel>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                    Orientation="Horizontal">
+            </StackPanel>-->
+        </ListBox>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Grid.RowSpan="1"
+                    Orientation="Horizontal" Margin="0,0,0,-0.4">
             <Button Content="Назад" Click="Button_Click" IsCancel="True"/>
             <Button Content="Удалить выбранное" Name="BtnDelete" Margin="0, 5, 0, 5"
                     Click="BtnDelete_Click" Visibility="Hidden"/>

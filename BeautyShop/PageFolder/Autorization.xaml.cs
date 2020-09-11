@@ -26,8 +26,13 @@ namespace BeautyShop.PageFolder
         {
             InitializeComponent();
         }
-            public int i;
+            public int i; //счетчик неудачных попыток авторизоваться
 
+        /// <summary>
+        /// Влзвращение в главное меню и чистка поля
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
             PasswordBox.Text = null;
@@ -37,14 +42,20 @@ namespace BeautyShop.PageFolder
             ClsFrame.FrmBody.GoBack();
 
         }
+
+        /// <summary>
+        /// Авторизация администратора
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAccept_Click(object sender, RoutedEventArgs e)
         {
-
-            if (string.IsNullOrWhiteSpace(PasswordBox.Text))
+            
+            if (string.IsNullOrWhiteSpace(PasswordBox.Text)) //Проверка на пустую строку
             {
-                BrdInCorrect.Visibility = Visibility.Visible;
+                BrdInCorrect.Visibility = Visibility.Visible; //предуперждение о невведенном пароле
                 i++;
-                if (i == 3)
+                if (i == 3) //действие при трех неудачных попытках авторизоваться
                 {
                     MessageBox.Show("I think you are not a admin");
                     ClsFrame.FrmBody.Navigate(new MainMenu());
@@ -55,8 +66,8 @@ namespace BeautyShop.PageFolder
             }
             else
             {
-                AdminService adminService = ClsEnt.Ent.AdminService.FirstOrDefault(x => x.Password == PasswordBox.Text);
-                if (adminService == null)
+                AdminService adminService = ClsEnt.Ent.AdminService.FirstOrDefault(x => x.Password == PasswordBox.Text); //подключение к БД
+                if (adminService == null) //Проверка на наличие значения в БД
                 {
                     BrdInCorrect.Visibility = Visibility.Visible;
                     i++;
@@ -70,7 +81,7 @@ namespace BeautyShop.PageFolder
                         i = 0;
                     }
                 }
-                else
+                else //удачная авторизация
                 {
                     GlobalVar.IsAdmin = true;
                     ClsFrame.FrmBody.Navigate(new ServiceList());
