@@ -13,8 +13,41 @@
     <Grid Background="{StaticResource Brush}" MouseDown="Rectangle_MouseDown">
         <Frame NavigationUIVisibility="Hidden"
                x:Name="FrmCenter"/>
-        <Button Width="25" Height="25" Content="X" Style="{StaticResource BtnElipse}"
-                Foreground="Black" HorizontalAlignment="Right" Name="BtnCLose"
-                VerticalAlignment="Top" Margin="0" Click="BtnCLose_Click"/>
+        <StackPanel Orientation="Horizontal" Margin="2"
+                    VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button Height="20" Width="20" Name="BtnMinimize" Click="BtnMiniature_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" Background="Transparent">
+                            <Path x:Name="Pt" Data="M0.5,0 M0,0.5 L0.5,0.5 M0.5, 0.5 L0.5,0.5 M0.5, 0.5"
+                      Stretch="Uniform" Stroke="Black" StrokeThickness="2"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="LightBlue"/>
+                                <Setter TargetName="Pt" Property="Stroke" Value="Black"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Height="20" Width="20" Name="BtnClose" 
+                    Click="BtnCLose_Click" Margin="0, 5, 5, 5">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" Background="Transparent">
+                            <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1"
+                      Stretch="Uniform" Stroke="Black" StrokeThickness="2"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="Red"/>
+                                <Setter TargetName="Pt" Property="Stroke" Value="Black"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

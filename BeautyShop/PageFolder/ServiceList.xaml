@@ -109,7 +109,7 @@
                     Click="BtnDelete_Click" Visibility="Hidden"/>
             <Button  Content="Корзина" Visibility="Hidden" Name="BtnBacket" Click="BtnBacket_Click"/>
             <Button Name="BtnEdit" Click="BtnEdit_Click" Content="Изменить" Visibility="Hidden"/>
-            <StackPanel Orientation="Horizontal" Name="SPNavigation">
+            <StackPanel Orientation="Horizontal" Name="SPNavigation" Visibility="Hidden">
                 <Button Width="30">
                     <Image Height="20" Source="/Resources/Photo/Left.png"/>
                 </Button>

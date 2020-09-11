@@ -42,5 +42,10 @@ namespace BeautyShop
         {
             this.Close();
         }
+
+        private void BtnMiniature_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }
