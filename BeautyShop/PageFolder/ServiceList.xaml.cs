@@ -45,7 +45,7 @@ namespace BeautyShop.PageFolder
             {
                 SPService1.Visibility = Visibility.Hidden;
                 SPService2.Margin = new Thickness(15, -110, 15, 5);
-            } 
+            }
             else
             {
                 SPService1.Visibility = Visibility.Visible; //восстановление услуги
@@ -59,21 +59,16 @@ namespace BeautyShop.PageFolder
             else
                 SPService2.Visibility = Visibility.Visible;
 
-            string NewPrice1 = Convert.ToString(GlobalVar.Price1);
-            TxtPrice1.Text = NewPrice1;
-            string NewPrice2 = Convert.ToString(GlobalVar.Price2);
-            TxtPrice2.Text = NewPrice2;
 
+            TT1.Content = TBReview1.Text; //Наполнение ToolTip
             TT2.Content = TBReview2.Text;
-            TT1.Content = TBReview1.Text;
-
         }
         /// <summary>
         /// кнопка получения услуги
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BtnGetServ_Click(object sender, RoutedEventArgs e) 
+        private void BtnGetServ_Click(object sender, RoutedEventArgs e)
         {
             BtnBacket.Visibility = Visibility.Visible;
         }
@@ -84,7 +79,7 @@ namespace BeautyShop.PageFolder
         /// <param name="e"></param>
         private void BtnMoreInfo_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(TBReview1.Text); 
+            MessageBox.Show(TBReview1.Text);
         }
         /// <summary>
         /// выход в меню
@@ -96,7 +91,11 @@ namespace BeautyShop.PageFolder
             ClsFrame.FrmBody.Navigate(new MainMenu());
             GlobalVar.IsAdmin = false;
         }
-        //переход в режим бога
+        /// <summary>
+        /// переход в режим бога
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             ClsFrame.FrmBody.Navigate(new EditPage());
@@ -131,5 +130,91 @@ namespace BeautyShop.PageFolder
         {
             MessageBox.Show(TBReview2.Text);
         }
+
+        /// <summary>
+        /// Загрузка страницы и подгрузка скидки
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            //выполняем проверку для превой услуги
+            if (GlobalVar.IsChangedService1 == true) //проверка на то, была ли изменена цена
+            {
+                GlobalVar.KOSTIL1 = GlobalVar.OldPrice1;
+
+                if (GlobalVar.IsSale1 == true) //проверка на то, стала ли новая цена ниже предыдущей
+                {
+                    TxtSale1.Text = Convert.ToString(GlobalVar.Price1); //если да, то перечеркиваем старую цену и пишем новую ниже
+                    TxtPrice1.Text = Convert.ToString(GlobalVar.KOSTIL1);
+                    TxtPrice1.TextDecorations = TextDecorations.Strikethrough;
+                    TxtSale1.Visibility = Visibility.Visible;
+                    GlobalVar.OldPrice1 = Convert.ToInt32(TxtSale1.Text);
+                }
+                else
+                {
+                    TxtSale1.Visibility = Visibility.Hidden;//если нет, то просто меняем старую цену на новую
+                    GlobalVar.OldPrice1 = GlobalVar.Price1;
+                    TxtPrice1.Text = Convert.ToString(GlobalVar.Price1);
+                }
+                GlobalVar.IsChangedService1 = false; //обнуляем измененность цены
+
+            }
+            else //если цена не менялась
+            {
+                if (GlobalVar.IsSale1 == true) //проверяем на наличие скидки
+                {
+                    TxtPrice1.Text = Convert.ToString(GlobalVar.KOSTIL1);
+                    TxtSale1.Text = Convert.ToString(GlobalVar.Price1); //перечеркиваем старую цену и ниже пишем новую
+                    TxtPrice1.TextDecorations = TextDecorations.Strikethrough;
+                    TxtSale1.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    TxtSale1.Visibility = Visibility.Hidden; //просто отображаем новую (или старую, если изменений не было вовсе) цену
+                    TxtPrice1.Text = Convert.ToString(GlobalVar.Price1);
+                }
+
+
+                //выполняем проверку для второй услуги
+                if (GlobalVar.IsChangedService2 == true) //проверка на то, была ли изменена цена
+                {
+                    GlobalVar.KOSTIL2 = GlobalVar.OldPrice2;
+
+                    if (GlobalVar.IsSale2 == true) //проверка на то, стала ли новая цена ниже предыдущей
+                    {
+                        TxtSale2.Text = Convert.ToString(GlobalVar.Price2); //если да, то перечеркиваем старую цену и пишем новую ниже
+                        TxtPrice2.Text = Convert.ToString(GlobalVar.KOSTIL2);
+                        TxtPrice2.TextDecorations = TextDecorations.Strikethrough;
+                        TxtSale2.Visibility = Visibility.Visible;
+                        GlobalVar.OldPrice2 = Convert.ToInt32(TxtSale2.Text);
+                    }
+                    else
+                    {
+                        TxtSale2.Visibility = Visibility.Hidden;//если нет, то просто меняем старую цену на новую
+                        GlobalVar.OldPrice2 = GlobalVar.Price2;
+                        TxtPrice2.Text = Convert.ToString(GlobalVar.Price2);
+                    }
+                    GlobalVar.IsChangedService2 = false; //обнуляем измененность цены
+                }
+                else //если цена не менялась
+                {
+                    if (GlobalVar.IsSale2 == true) //проверяем на наличие скидки
+                    {
+                        TxtPrice2.Text = Convert.ToString(GlobalVar.KOSTIL2);
+                        TxtSale2.Text = Convert.ToString(GlobalVar.Price2); //перечеркиваем старую цену и ниже пишем новую
+                        TxtPrice2.TextDecorations = TextDecorations.Strikethrough;
+                        TxtSale2.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        TxtSale2.Visibility = Visibility.Hidden; //просто отображаем новую (или старую, если изменений не было вовсе) цену
+                        TxtPrice2.Text = Convert.ToString(GlobalVar.Price2);
+                    }
+                }
+            }
+        }
+
     }
 }

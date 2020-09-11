@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BeautyShop.PageFolder"
-      mc:Ignorable="d" 
+      mc:Ignorable="d" Loaded="Page_Loaded"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ServiceList">
 
@@ -49,11 +49,14 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
-                    <TextBlock FontSize="22pt" Text="XXXXX" Name="TxtPrice1"
+                    <TextBlock FontSize="22pt" Text="1100" Name="TxtPrice1"
                                TextWrapping="Wrap" TextAlignment="Center"
-                               VerticalAlignment="Center" Margin="-70, 30,0,0" 
+                               VerticalAlignment="Center" Margin="-70, 30, 0, 0" 
                                Width="200" Height="80"/>
-                        <CheckBox HorizontalAlignment="Center"
+                    <TextBlock FontSize="22pt" Text="xxxx" Name="TxtSale1" 
+                               TextAlignment="Center" Margin="-70, -50, 0, 0" 
+                               Width="200" Height="80" Visibility="Hidden"/>
+                    <CheckBox HorizontalAlignment="Center"
                                   VerticalAlignment="Center" Name="CBToDelete" 
                                   Visibility="Visible" Margin="150, -115, 0, 0"/>
                 </StackPanel>
@@ -91,11 +94,14 @@
                 </StackPanel>
                 <StackPanel>
                     <StackPanel VerticalAlignment="Center" Margin="-70, 0,0,0" 
-                                Width="200" Height="80">
-                        <TextBlock FontSize="22pt" Text="XXXXX" Name="TxtPrice2"
+                                Width="200" Height="100">
+                        <TextBlock FontSize="22pt" Text="2000" Name="TxtPrice2"
                                TextWrapping="Wrap" TextAlignment="Center"
                                VerticalAlignment="Center" Margin="0, 30,0,0" 
                                Width="200" Height="80"/>
+                        <TextBlock FontSize="22pt" Text="xxxx" Name="TxtSale2" 
+                               TextAlignment="Center" Margin="0, -50, 0, 0" 
+                               Width="200" Height="80" Visibility="Hidden"/>
                     </StackPanel>
                     <CheckBox HorizontalAlignment="Center" Name="CBToDelete2"
                                   VerticalAlignment="Center"

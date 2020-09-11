@@ -36,11 +36,6 @@ namespace BeautyShop.PageFolder
             ClsFrame.FrmBody.Navigate(new ServiceList());
         }
 
-        private void BtnSave_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BtnGetServ_Click(object sender, RoutedEventArgs e)
         {
 
@@ -57,7 +52,7 @@ namespace BeautyShop.PageFolder
         /// <param name="e"></param>
         private void BtnGiveBack_Click(object sender, RoutedEventArgs e)
         {
-            if (CBToDelete.IsChecked == true)
+            if (CBToDelete.IsChecked == true) //проверка на выделение удаляемого объекта
             {
                 if (GlobalVar.IsDeleted1 == true)
                 {
@@ -76,12 +71,23 @@ namespace BeautyShop.PageFolder
             }
         }
 
+        /// <summary>
+        /// изменеие цены первой услуги
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnChange1_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                float NewPrice1 = Convert.ToInt32(TxtPrice1.Text);
-                GlobalVar.Price1 = NewPrice1;
+                GlobalVar.Price1 = Convert.ToInt32(TxtPrice1.Text); //забиваем в глобальную переменную новую цену из комбобокса
+
+                if (GlobalVar.OldPrice1 > GlobalVar.Price1) //сравниваем старую и новую цены
+                    GlobalVar.IsSale1 = true; //если новая ниже, то включаем скидку
+                else
+                    GlobalVar.IsSale1 = false; //если выше, то не включаем скидку
+
+                GlobalVar.IsChangedService1 = true; //отмечаем, что внесли изменения в стоимость
             }
             catch
             {
@@ -89,17 +95,34 @@ namespace BeautyShop.PageFolder
             }
         }
 
+        /// <summary>
+        /// изменение цены второй услуги
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnChange2_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                float NewPrice2 = Convert.ToInt32(TxtPrice2.Text);
-                GlobalVar.Price2 = NewPrice2;
+                GlobalVar.Price2 = Convert.ToInt32(TxtPrice2.Text); //забиваем в глобальную переменную новую цену из комбобокса
+
+                if (GlobalVar.OldPrice2 > GlobalVar.Price2) //сравниваем старую и новую цены
+                    GlobalVar.IsSale2 = true; //если новая ниже, то включаем скидку
+                else
+                    GlobalVar.IsSale2 = false; //если выше, то не включаем скидку
+
+                GlobalVar.IsChangedService2 = true; //отмечаем, что внесли изменения в стоимость
             }
             catch
             {
                 MessageBox.Show("Вы ввели недопустимое значение, нужно вводить цифры!", "Ошибка");
             }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            TxtPrice1.Text = Convert.ToString(GlobalVar.OldPrice1);
+            TxtPrice2.Text = Convert.ToString(GlobalVar.OldPrice2);
         }
     }
 }

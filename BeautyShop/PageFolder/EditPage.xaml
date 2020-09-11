@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BeautyShop.PageFolder"
-      mc:Ignorable="d" 
+      mc:Ignorable="d" Loaded="Page_Loaded"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="EditPage">
 
@@ -45,7 +45,7 @@
                                 Width="200" Height="80">
                         <TextBlock FontSize="22pt" Text="Стоимость:"
                                    TextWrapping="Wrap" TextAlignment="Center"/>
-                        <TextBox FontSize="22pt" Text="XXXXX"  Name="TxtPrice1"
+                        <TextBox FontSize="22pt" Text="1100"  Name="TxtPrice1"
                                    TextWrapping="Wrap" TextAlignment="Center"/>
                     </StackPanel>
                     <CheckBox HorizontalAlignment="Center"
@@ -87,7 +87,7 @@
                                 Width="200" Height="80">
                         <TextBlock FontSize="22pt" Text="Стоимость:"
                                    TextWrapping="Wrap" TextAlignment="Center"/>
-                        <TextBox FontSize="22pt" Text="XXXXX" Name="TxtPrice2"
+                        <TextBox FontSize="22pt" Text="100" Name="TxtPrice2"
                                    TextWrapping="Wrap" TextAlignment="Center"/>
                     </StackPanel>
                     <CheckBox HorizontalAlignment="Center" Name="CBToDelete2"
