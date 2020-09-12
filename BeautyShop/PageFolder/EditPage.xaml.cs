@@ -80,14 +80,25 @@ namespace BeautyShop.PageFolder
         {
             try
             {
-                GlobalVar.Price1 = Convert.ToInt32(TxtPrice1.Text); //забиваем в глобальную переменную новую цену из комбобокса
-
-                if (GlobalVar.OldPrice1 > GlobalVar.Price1) //сравниваем старую и новую цены
-                    GlobalVar.IsSale1 = true; //если новая ниже, то включаем скидку
+                if (GlobalVar.Price1 < 0)
+                {
+                    MessageBox.Show("Цена не может быть отрицательна, вы же не Робин Гуд!", "Ошибка!");
+                }
+                else if (GlobalVar.Price1 == 0)
+                {
+                    MessageBox.Show("Капитан, мы не можем отдать это просто так!", "Ошибка!");
+                }
                 else
-                    GlobalVar.IsSale1 = false; //если выше, то не включаем скидку
+                {
+                    GlobalVar.Price1 = Convert.ToInt32(TxtPrice1.Text); //забиваем в глобальную переменную новую цену из комбобокса
 
-                GlobalVar.IsChangedService1 = true; //отмечаем, что внесли изменения в стоимость
+                    if (GlobalVar.OldPrice1 > GlobalVar.Price1) //сравниваем старую и новую цены
+                        GlobalVar.IsSale1 = true; //если новая ниже, то включаем скидку
+                    else
+                        GlobalVar.IsSale1 = false; //если выше, то не включаем скидку
+
+                    GlobalVar.IsChangedService1 = true; //отмечаем, что внесли изменения в стоимость
+                }
             }
             catch
             {
@@ -104,14 +115,25 @@ namespace BeautyShop.PageFolder
         {
             try
             {
-                GlobalVar.Price2 = Convert.ToInt32(TxtPrice2.Text); //забиваем в глобальную переменную новую цену из комбобокса
-
-                if (GlobalVar.OldPrice2 > GlobalVar.Price2) //сравниваем старую и новую цены
-                    GlobalVar.IsSale2 = true; //если новая ниже, то включаем скидку
+                if (GlobalVar.Price2 < 0)
+                {
+                    MessageBox.Show("Цена не может быть отрицательна, вы же не Робин Гуд!", "Ошибка!");
+                }
+                else if (GlobalVar.Price2 == 0)
+                {
+                    MessageBox.Show("Капитан, мы не можем отдать это просто так!", "Ошибка!");
+                }
                 else
-                    GlobalVar.IsSale2 = false; //если выше, то не включаем скидку
+                {
+                    GlobalVar.Price2 = Convert.ToInt32(TxtPrice2.Text); //забиваем в глобальную переменную новую цену из комбобокса
 
-                GlobalVar.IsChangedService2 = true; //отмечаем, что внесли изменения в стоимость
+                    if (GlobalVar.OldPrice2 > GlobalVar.Price2) //сравниваем старую и новую цены
+                        GlobalVar.IsSale2 = true; //если новая ниже, то включаем скидку
+                    else
+                        GlobalVar.IsSale2 = false; //если выше, то не включаем скидку
+
+                    GlobalVar.IsChangedService2 = true; //отмечаем, что внесли изменения в стоимость
+                }
             }
             catch
             {
