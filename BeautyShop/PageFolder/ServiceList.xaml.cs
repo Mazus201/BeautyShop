@@ -59,8 +59,7 @@ namespace BeautyShop.PageFolder
             else
                 SPService2.Visibility = Visibility.Visible;
 
-
-            TT1.Content = TBReview1.Text; //Наполнение ToolTip
+            TT1.Content = TBReview1.Text;
             TT2.Content = TBReview2.Text;
         }
         /// <summary>
@@ -151,12 +150,14 @@ namespace BeautyShop.PageFolder
                     TxtPrice1.TextDecorations = TextDecorations.Strikethrough;
                     TxtSale1.Visibility = Visibility.Visible;
                     GlobalVar.OldPrice1 = Convert.ToInt32(TxtSale1.Text);
+                    TTPrice2.Content = TxtSale1.Text;
                 }
                 else
                 {
                     TxtSale1.Visibility = Visibility.Hidden;//если нет, то просто меняем старую цену на новую
                     GlobalVar.OldPrice1 = GlobalVar.Price1;
                     TxtPrice1.Text = Convert.ToString(GlobalVar.Price1);
+                    TTPrice2.Content = TxtPrice1.Text;
                 }
                 GlobalVar.IsChangedService1 = false; //обнуляем измененность цены
 
@@ -169,11 +170,13 @@ namespace BeautyShop.PageFolder
                     TxtSale1.Text = Convert.ToString(GlobalVar.Price1); //перечеркиваем старую цену и ниже пишем новую
                     TxtPrice1.TextDecorations = TextDecorations.Strikethrough;
                     TxtSale1.Visibility = Visibility.Visible;
+                    TTPrice2.Content = TxtSale1.Text;
                 }
                 else
                 {
                     TxtSale1.Visibility = Visibility.Hidden; //просто отображаем новую (или старую, если изменений не было вовсе) цену
                     TxtPrice1.Text = Convert.ToString(GlobalVar.Price1);
+                    TTPrice1.Content = TxtPrice1.Text;
                 }
 
 
@@ -189,12 +192,14 @@ namespace BeautyShop.PageFolder
                         TxtPrice2.TextDecorations = TextDecorations.Strikethrough;
                         TxtSale2.Visibility = Visibility.Visible;
                         GlobalVar.OldPrice2 = Convert.ToInt32(TxtSale2.Text);
+                        TTPrice2.Content = TxtSale2.Text;
                     }
                     else
                     {
                         TxtSale2.Visibility = Visibility.Hidden;//если нет, то просто меняем старую цену на новую
                         GlobalVar.OldPrice2 = GlobalVar.Price2;
                         TxtPrice2.Text = Convert.ToString(GlobalVar.Price2);
+                        TTPrice2.Content = TxtPrice2.Text;
                     }
                     GlobalVar.IsChangedService2 = false; //обнуляем измененность цены
                 }
@@ -206,11 +211,13 @@ namespace BeautyShop.PageFolder
                         TxtSale2.Text = Convert.ToString(GlobalVar.Price2); //перечеркиваем старую цену и ниже пишем новую
                         TxtPrice2.TextDecorations = TextDecorations.Strikethrough;
                         TxtSale2.Visibility = Visibility.Visible;
+                        TTPrice2.Content = TxtSale2.Text;
                     }
                     else
                     {
                         TxtSale2.Visibility = Visibility.Hidden; //просто отображаем новую (или старую, если изменений не было вовсе) цену
                         TxtPrice2.Text = Convert.ToString(GlobalVar.Price2);
+                        TTPrice2.Content = TxtPrice2.Text;
                     }
                 }
             }
