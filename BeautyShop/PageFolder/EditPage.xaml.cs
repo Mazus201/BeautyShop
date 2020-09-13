@@ -90,7 +90,7 @@ namespace BeautyShop.PageFolder
                 }
                 else
                 {
-                    GlobalVar.Price1 = Convert.ToInt32(TxtPrice1.Text); //забиваем в глобальную переменную новую цену из комбобокса
+                    GlobalVar.Price1 = Convert.ToDouble(TxtPrice1.Text); //забиваем в глобальную переменную новую цену из комбобокса
 
                     if (GlobalVar.OldPrice1 > GlobalVar.Price1) //сравниваем старую и новую цены
                         GlobalVar.IsSale1 = true; //если новая ниже, то включаем скидку
@@ -125,7 +125,7 @@ namespace BeautyShop.PageFolder
                 }
                 else
                 {
-                    GlobalVar.Price2 = Convert.ToInt32(TxtPrice2.Text); //забиваем в глобальную переменную новую цену из комбобокса
+                    GlobalVar.Price2 = Convert.ToDouble(TxtPrice2.Text); //забиваем в глобальную переменную новую цену из комбобокса
 
                     if (GlobalVar.OldPrice2 > GlobalVar.Price2) //сравниваем старую и новую цены
                         GlobalVar.IsSale2 = true; //если новая ниже, то включаем скидку

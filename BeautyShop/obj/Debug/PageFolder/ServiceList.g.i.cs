@@ -224,14 +224,6 @@ namespace BeautyShop.PageFolder {
         #line default
         #line hidden
         
-        
-        #line 119 "..\..\..\PageFolder\ServiceList.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.StackPanel SPNavigation;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -390,9 +382,6 @@ namespace BeautyShop.PageFolder {
             
             #line default
             #line hidden
-            return;
-            case 27:
-            this.SPNavigation = ((System.Windows.Controls.StackPanel)(target));
             return;
             }
             this._contentLoaded = true;

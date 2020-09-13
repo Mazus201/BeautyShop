@@ -13,14 +13,14 @@ namespace BeautyShop.AppData
         public static bool IsDeleted1 = false; //для чекбокса для удаления первой услуги
         public static bool IsDeleted2 = false; //второй услуги
 
-        public static float Price1 = 1100; //цена первой услуги
-        public static float Price2 = 2000; //цена второй услуги
+        public static double Price1 = 1100; //цена первой услуги
+        public static double Price2 = 2000; //цена второй услуги
 
-        public static float OldPrice1 = 1100; //Старая цена первой услуги
-        public static float OldPrice2 = 2000; //Старая цена второй услуги
+        public static double OldPrice1 = 1100; //Старая цена первой услуги
+        public static double OldPrice2 = 2000; //Старая цена второй услуги
 
-        public static float KOSTIL1 = 0; //Костыль дляотображения в текстбоксе
-        public static float KOSTIL2 = 0; //Костыль дляотображения в текстбоксе
+        public static double KOSTIL1 = 0; //Костыль дляотображения в текстбоксе
+        public static double KOSTIL2 = 0; //Костыль дляотображения в текстбоксе
 
         public static bool IsSale1 = false;
         public static bool IsSale2 = false;

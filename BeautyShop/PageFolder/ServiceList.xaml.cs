@@ -151,7 +151,7 @@ namespace BeautyShop.PageFolder
                         TxtPrice1.Text = Convert.ToString(GlobalVar.KOSTIL1);
                         TxtPrice1.TextDecorations = TextDecorations.Strikethrough;
                         TxtSale1.Visibility = Visibility.Visible;
-                        GlobalVar.OldPrice1 = Convert.ToInt32(TxtSale1.Text);
+                        GlobalVar.OldPrice1 = Convert.ToDouble(TxtSale1.Text);
                         TTPrice1.Content = TxtSale1.Text;
                     }
                     else
@@ -203,7 +203,7 @@ namespace BeautyShop.PageFolder
                             TxtPrice2.Text = Convert.ToString(GlobalVar.KOSTIL2);
                             TxtPrice2.TextDecorations = TextDecorations.Strikethrough;
                             TxtSale2.Visibility = Visibility.Visible;
-                            GlobalVar.OldPrice2 = Convert.ToInt32(TxtSale2.Text);
+                            GlobalVar.OldPrice2 = Convert.ToDouble(TxtSale2.Text);
                             TTPrice2.Content = TxtSale2.Text;
                         }
                         else
