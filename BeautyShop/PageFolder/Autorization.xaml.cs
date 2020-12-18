@@ -73,7 +73,7 @@ namespace BeautyShop.PageFolder
                     i++;
                     if (i == 3)
                     {
-                        MessageBox.Show("I think you are not a admin");
+                        MessageBox.Show("I think you are not an admin");
                         ClsFrame.FrmBody.Navigate(new MainMenu());
                         BrdInCorrect.Visibility = Visibility.Hidden;
                         GlobalVar.IsAdmin = false;

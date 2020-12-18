@@ -16,6 +16,22 @@
 
         <ListBox VerticalAlignment="Top" Grid.Row="0" Grid.RowSpan="1"
                  x:Name="LBMainContainer" Background="Transparent" BorderBrush="#00000000">
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+                    <ListBoxItem
+                        BorderBrush="Black"
+                        Width="400">
+                        <ListBoxItem.Resources>
+                            <Style TargetType="ListBoxItem">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{}"/>
+                                </Style.Triggers>
+                            </Style>
+                        </ListBoxItem.Resources>
+                    </ListBoxItem>
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+            
             <StackPanel Name="SPService1" Background="Transparent" 
                         Orientation="Horizontal" Margin="15, 5" Height="105"
                         Visibility="Visible">
@@ -116,14 +132,6 @@
                     Click="BtnDelete_Click" Visibility="Hidden"/>
             <Button  Content="Корзина" Visibility="Hidden" Name="BtnBacket" Click="BtnBacket_Click"/>
             <Button Name="BtnEdit" Click="BtnEdit_Click" Content="Изменить" Visibility="Hidden"/>
-            <StackPanel Orientation="Horizontal" Name="SPNavigation" Visibility="Hidden">
-                <Button Width="30">
-                    <Image Height="20" Source="/Resources/Photo/Left.png"/>
-                </Button>
-                <Button Width="30">
-                    <Image Height="20" Source="/Resources/Photo/Right.png" />
-                </Button>
-            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
